@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+    <PropertyGroup>
+        <CodeAnalysisRuleSetLocation Condition=" '$(NuGetPackageRoot)' != '' ">$(NuGetPackageRoot)\StyleCop.Analyzers.EricBurcham\1.0.0</CodeAnalysisRuleSetLocation>
+        <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' and '$(SolutionDir)' != '' ">$(SolutionDir)\packages\StyleCop.Analyzers.EricBurcham.1.0.0</CodeAnalysisRuleSetLocation>
+        <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' ">$([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory)))\packages\StyleCop.Analyzers.EricBurcham.1.0.0</CodeAnalysisRuleSetLocation>
+    </PropertyGroup>
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\RuleSet\StyleCop.Analyzers.EricBurcham.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+    <ItemGroup>
+        <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation)\Config\stylecop.json">
+		    <Link>stylecop.json</Link>
+		</AdditionalFiles>
+    </ItemGroup>
+</Project>
