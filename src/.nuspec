@@ -8,7 +8,7 @@
         </dependencies>
         <id>StyleCop.Analyzers.EricBurcham</id>
         <license type="expression">MIT</license>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </metadata>
     <files>
         <file src="StyleCop.Analyzers.EricBurcham.props" target="build" />
